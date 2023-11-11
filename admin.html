@@ -318,44 +318,37 @@
 								Nuevo administrador
 							</div>
 							<div class="full-width panel-content">
-								<form>
+								<form action="php/insertar_usuario.php" method="post">
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
 											<h5 class="text-condensedLight">Datos de administrador</h5>
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="DNIAdmin">
-												<label class="mdl-textfield__label" for="DNIAdmin">ID de usuario</label>
-												<span class="mdl-textfield__error">Número invalido</span>
-											</div>
-											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="NameAdmin">
-												<label class="mdl-textfield__label" for="NameAdmin">Nombre</label>
+												<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="Nombre" name="Nombre" required>
+												<label class="mdl-textfield__label" for="Nombre">Nombre</label>
 												<span class="mdl-textfield__error">Nombre inválido</span>
 											</div>
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="tel" pattern="-?[0-9+()- ]*(\.[0-9]+)?" id="phoneAdmin">
-												<label class="mdl-textfield__label" for="phoneAdmin">Teléfono</label>
+												<input class="mdl-textfield__input" type="tel" pattern="-?[0-9+()- ]*(\.[0-9]+)?" id="Teléfono" name="Teléfono">
+												<label class="mdl-textfield__label" for="Teléfono">Teléfono</label>
 												<span class="mdl-textfield__error">Numero de telefono invalido</span>
 											</div>
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" id="addressAdmin">
-												<label class="mdl-textfield__label" for="addressAdmin">Dirección</label>
+												<input class="mdl-textfield__input" type="text" id="Dirección" name="Dirección">
+												<label class="mdl-textfield__label" for="Dirección">Dirección</label>
 												<span class="mdl-textfield__error">Dirección inválida</span>
 											</div>
 										</div>
 										<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
 											<h5 class="text-condensedLight">Establecer contraseña</h5>
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="password" id="passwordAdmin">
-												<label class="mdl-textfield__label" for="passwordAdmin">Contraseña</label>
+												<input class="mdl-textfield__input" type="password" id="Contraseña" name="Contraseña" required>
+												<label class="mdl-textfield__label" for="Contraseña">Contraseña</label>
 												<span class="mdl-textfield__error">Contraseña invalida</span>
 											</div>
 										</div>
 									</div>
 									<p class="text-center">
-										<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary" id="btn-addAdmin">
-											<i class="zmdi zmdi-plus"></i>
-										</button>
+										<input type="submit" value="Registrar">
 										<div class="mdl-tooltip" for="btn-addAdmin">Agregar administrador</div>
 									</p>
 								</form>

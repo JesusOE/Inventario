@@ -318,44 +318,42 @@
 								Pagos y descuentos
 							</div>
 							<div class="full-width panel-content">
-								<form>
+								<form action="php/insertar_ventas.php" method="post">
 									<h5 class="text-condensedLight">Información</h5>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9- ]*(\.[0-9]+)?" id="BarCode">
-										<label class="mdl-textfield__label" for="BarCode">ID del producto</label>
+										<input class="mdl-textfield__input" type="number" pattern="-?[0-9- ]*(\.[0-9]+)?" id="Id_Produ" name="Id_Produ" required>
+										<label class="mdl-textfield__label" for="Id_Produ">ID del producto</label>
 										<span class="mdl-textfield__error">ID no válido</span>
 									</div>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="NameProduct">
-										<label class="mdl-textfield__label" for="NameProduct">Nombre del producto</label>
+										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="Producto" name="Producto" required>
+										<label class="mdl-textfield__label" for="Producto">Nombre del producto</label>
 										<span class="mdl-textfield__error">Nombre inválido</span>
 									</div>
 									<h5 class="text-condensedLight">Unidades y Precio</h5>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="StrockProduct">
-										<label class="mdl-textfield__label" for="StrockProduct">Unidades</label>
+										<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="Cantidad" name="Cantidad" required>
+										<label class="mdl-textfield__label" for="Cantidad">Unidades</label>
 										<span class="mdl-textfield__error">Número invalido</span>
 									</div>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[0-9.]*(\.[0-9]+)?" id="PriceProduct">
-										<label class="mdl-textfield__label" for="PriceProduct">Precio</label>
+										<input class="mdl-textfield__input" type="number" pattern="-?[0-9.]*(\.[0-9]+)?" id="Precio" name="Precio" required>
+										<label class="mdl-textfield__label" for="Precio">Precio</label>
 										<span class="mdl-textfield__error">Precio no válido</span>
 									</div>
 									<h5 class="text-condensedLight">Descuento</h5>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="StrockProduct">
-										<label class="mdl-textfield__label" for="StrockProduct">Descuento</label>
+										<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="Descuento" name="Descuento">
+										<label class="mdl-textfield__label" for="Descuento">Descuento</label>
 										<span class="mdl-textfield__error">Descuento invalido</span>
 									</div>
 									<h5 class="text-condensedLight">Total</h5>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[0-9.]*(\.[0-9]+)?" id="PriceProduct">
-										<label class="mdl-textfield__label" for="PriceProduct">$</label>
+										<input class="mdl-textfield__input" type="number" pattern="-?[0-9.]*(\.[0-9]+)?" id="Total" name="Total" required>
+										<label class="mdl-textfield__label" for="Total">$</label>
 									</div>
 									<p class="text-center">
-										<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary" id="btn-addPayment">
-											<i class="zmdi zmdi-plus"></i>
-										</button>
+										<input type="submit" value="Registrar">
 										<div class="mdl-tooltip" for="btn-addPayment">Agregar</div>
 									</p>
 								</form>
@@ -406,7 +404,6 @@
 										<span class="mdl-list__item-primary-content">
 											<i class="zmdi zmdi-card mdl-list__item-avatar"></i>
 											<span>3. Pago</span>
-											
 										</span>
 										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
 									</div>

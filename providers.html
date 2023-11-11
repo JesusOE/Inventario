@@ -318,32 +318,25 @@
 								Nuevo proveedor
 							</div>
 							<div class="full-width panel-content">
-								<form>
+								<form action="php/insertar_proveedor.php" method="post">
 									<h5 class="text-condensedLight">Datos de proveedor</h5>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="DNIProvider">
-										<label class="mdl-textfield__label" for="DNIProvider">ID del proveedor</label>
-										<span class="mdl-textfield__error">Número invalido</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9 ]*(\.[0-9]+)?" id="NameProvider">
-										<label class="mdl-textfield__label" for="NameProvider">Nombre</label>
+										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9 ]*(\.[0-9]+)?" id="Nombre" name="Nombre" required>
+										<label class="mdl-textfield__label" for="Nombre">Nombre</label>
 										<span class="mdl-textfield__error">Nombre inválido</span>
 									</div>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" id="addressProvider">
-										<label class="mdl-textfield__label" for="addressProvider">Dirección</label>
+										<input class="mdl-textfield__input" type="text" id="Dirección" name="Dirección">
+										<label class="mdl-textfield__label" for="Dirección">Dirección</label>
 										<span class="mdl-textfield__error">Dirección inválida</span>
 									</div>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="tel" pattern="-?[0-9+()- ]*(\.[0-9]+)?" id="phoneProvider">
-										<label class="mdl-textfield__label" for="phoneProvider">Teléfono</label>
+										<input class="mdl-textfield__input" type="tel" pattern="-?[0-9+()- ]*(\.[0-9]+)?" id="Teléfono" name="Teléfono">
+										<label class="mdl-textfield__label" for="Teléfono">Teléfono</label>
 										<span class="mdl-textfield__error">Numero de telefono invalido</span>
 									</div>
 									<p class="text-center">
-										<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary" id="btn-addProvider">
-											<i class="zmdi zmdi-plus"></i>
-										</button>
+										<input type="submit" value="Registrar">
 										<div class="mdl-tooltip" for="btn-addProvider">Agregar proveedor</div>
 									</p>
 								</form>
