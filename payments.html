@@ -321,14 +321,36 @@
 								<form>
 									<h5 class="text-condensedLight">Información</h5>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="NamePayment">
-										<label class="mdl-textfield__label" for="NamePayment">Titulo</label>
-										<span class="mdl-textfield__error">Titulo invalido</span>
+										<input class="mdl-textfield__input" type="number" pattern="-?[0-9- ]*(\.[0-9]+)?" id="BarCode">
+										<label class="mdl-textfield__label" for="BarCode">ID del producto</label>
+										<span class="mdl-textfield__error">ID no válido</span>
 									</div>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="descriptionPayment">
-										<label class="mdl-textfield__label" for="descriptionPayment">Descripción</label>
-										<span class="mdl-textfield__error">Descripción no válida</span>
+										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="NameProduct">
+										<label class="mdl-textfield__label" for="NameProduct">Nombre del producto</label>
+										<span class="mdl-textfield__error">Nombre inválido</span>
+									</div>
+									<h5 class="text-condensedLight">Unidades y Precio</h5>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="StrockProduct">
+										<label class="mdl-textfield__label" for="StrockProduct">Unidades</label>
+										<span class="mdl-textfield__error">Número invalido</span>
+									</div>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" pattern="-?[0-9.]*(\.[0-9]+)?" id="PriceProduct">
+										<label class="mdl-textfield__label" for="PriceProduct">Precio</label>
+										<span class="mdl-textfield__error">Precio no válido</span>
+									</div>
+									<h5 class="text-condensedLight">Descuento</h5>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="StrockProduct">
+										<label class="mdl-textfield__label" for="StrockProduct">Descuento</label>
+										<span class="mdl-textfield__error">Descuento invalido</span>
+									</div>
+									<h5 class="text-condensedLight">Total</h5>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" pattern="-?[0-9.]*(\.[0-9]+)?" id="PriceProduct">
+										<label class="mdl-textfield__label" for="PriceProduct">$</label>
 									</div>
 									<p class="text-center">
 										<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored bg-primary" id="btn-addPayment">
