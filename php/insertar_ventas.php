@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Ejecutar la consulta
     if ($stmt->execute()) {
-        header('Location: ../home.html');
+        header('Location: ../home.php');
     } else {
         echo "Error al registrar venta: " . $stmt->error;
     }

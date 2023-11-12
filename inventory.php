@@ -1,10 +1,14 @@
+<?php
+include 'php/eliminar_registros.php';
+?>
+
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Payments</title>
+	<title>Inventario</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/sweetalert2.css">
 	<link rel="stylesheet" href="css/material.min.css">
@@ -130,11 +134,10 @@
 					</span>
 				</figcaption>
 			</figure>
-
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
 					<li class="full-width">
-						<a href="home.html" class="full-width">
+						<a href="home.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-view-dashboard"></i>
 							</div>
@@ -157,7 +160,7 @@
 						<ul class="full-width menu-principal sub-menu-options">
 
 							<li class="full-width">
-								<a href="providers.html" class="full-width">
+								<a href="providers.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-truck"></i>
 									</div>
@@ -167,7 +170,7 @@
 								</a>
 							</li>
 							<li class="full-width">
-								<a href="payments.html" class="full-width">
+								<a href="payments.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-card"></i>
 									</div>
@@ -201,7 +204,7 @@
 						</a>
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
-								<a href="admin.html" class="full-width">
+								<a href="admin.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-account"></i>
 									</div>
@@ -211,7 +214,7 @@
 								</a>
 							</li>
 							<li class="full-width">
-								<a href="client.html" class="full-width">
+								<a href="client.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-accounts"></i>
 									</div>
@@ -224,7 +227,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="products.html" class="full-width">
+						<a href="products.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -235,7 +238,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="sales.html" class="full-width">
+						<a href="sales.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-shopping-cart"></i>
 							</div>
@@ -246,7 +249,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventory.html" class="full-width">
+						<a href="inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>
@@ -297,121 +300,84 @@
 	<section class="full-width pageContent">
 		<section class="full-width header-well">
 			<div class="full-width header-well-icon">
-				<i class="zmdi zmdi-card"></i>
+				<i class="zmdi zmdi-store"></i>
 			</div>
 			<div class="full-width header-well-text">
 				<p class="text-condensedLight">
-					Elaborar notas referentes a pagos pendientes o descuentos aplicados a los artículos.
+					En la sección de Inventario, tendrás la capacidad de visualizar y consultar todo lo relacionado con los productos disponibles en tienda. Mantén un control completo sobre nuestros productos en stock y optimiza tu gestión de inventario."
 				</p>
 			</div>
 		</section>
-		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-			<div class="mdl-tabs__tab-bar">
-				<a href="#tabNewPayment" class="mdl-tabs__tab is-active">Añadir</a>
-				<a href="#tabListPayment" class="mdl-tabs__tab">Lista</a>
-			</div>
-			<div class="mdl-tabs__panel is-active" id="tabNewPayment">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
-						<div class="full-width panel mdl-shadow--2dp">
-							<div class="full-width panel-tittle bg-primary text-center tittles">
-								Pagos y descuentos
-							</div>
-							<div class="full-width panel-content">
-								<form action="php/insertar_ventas.php" method="post">
-									<h5 class="text-condensedLight">Información</h5>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9- ]*(\.[0-9]+)?" id="Id_Produ" name="Id_Produ" required>
-										<label class="mdl-textfield__label" for="Id_Produ">ID del producto</label>
-										<span class="mdl-textfield__error">ID no válido</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-z0-9áéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="Producto" name="Producto" required>
-										<label class="mdl-textfield__label" for="Producto">Nombre del producto</label>
-										<span class="mdl-textfield__error">Nombre inválido</span>
-									</div>
-									<h5 class="text-condensedLight">Unidades y Precio</h5>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="Cantidad" name="Cantidad" required>
-										<label class="mdl-textfield__label" for="Cantidad">Unidades</label>
-										<span class="mdl-textfield__error">Número invalido</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9.]*(\.[0-9]+)?" id="Precio" name="Precio" required>
-										<label class="mdl-textfield__label" for="Precio">Precio</label>
-										<span class="mdl-textfield__error">Precio no válido</span>
-									</div>
-									<h5 class="text-condensedLight">Descuento</h5>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="Descuento" name="Descuento">
-										<label class="mdl-textfield__label" for="Descuento">Descuento</label>
-										<span class="mdl-textfield__error">Descuento invalido</span>
-									</div>
-									<h5 class="text-condensedLight">Total</h5>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9.]*(\.[0-9]+)?" id="Total" name="Total" required>
-										<label class="mdl-textfield__label" for="Total">$</label>
-									</div>
-									<p class="text-center">
-										<input type="submit" value="Registrar">
-										<div class="mdl-tooltip" for="btn-addPayment">Agregar</div>
-									</p>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="mdl-tabs__panel" id="tabListPayment">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
-						<div class="full-width panel mdl-shadow--2dp">
-							<div class="full-width panel-tittle bg-success text-center tittles">
-								Pagos y descuentos
-							</div>
-							<div class="full-width panel-content">
-								<form action="#">
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-										<label class="mdl-button mdl-js-button mdl-button--icon" for="searchPayment">
-											<i class="zmdi zmdi-search"></i>
-										</label>
-										<div class="mdl-textfield__expandable-holder">
-											<input class="mdl-textfield__input" type="text" id="searchPayment">
-											<label class="mdl-textfield__label"></label>
-										</div>
-									</div>
-								</form>
-								<div class="mdl-list">
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-card mdl-list__item-avatar"></i>
-											<span>1. Pago</span>
-											
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-card mdl-list__item-avatar"></i>
-											<span>2. Pago</span>
-											
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-card mdl-list__item-avatar"></i>
-											<span>3. Pago</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+		<div class="full-width divider-menu-h"></div>
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive">
+					<?php
+					// Datos de conexión a la base de datos
+					$servername = "localhost";
+					$username = "root";
+					$password = "";
+					$dbname = "inventario";
+
+					// Crear conexión
+					$conn = new mysqli($servername, $username, $password, $dbname);
+
+					// Verificar la conexión
+					if ($conn->connect_error) {
+						die("Error de conexión: " . $conn->connect_error);
+					}
+
+					// Obtener datos de la tabla de productos
+					$sql = "SELECT * FROM productos";
+					$result = $conn->query($sql);
+
+					if ($result->num_rows > 0) {
+					?>
+						<tr>
+						<th class="mdl-data-table__cell--non-numeric">ID</th>
+						<th>Producto</th>
+						<th>Unidades</th>
+						<th>Precio de Venta</th>
+						<th>Precio de Proveedor</th>
+						<th>Acciones</th>
+					</tr>
+					<?php
+					while ($row = $result->fetch_assoc()) {
+					?>
+						<tr>
+							<td class="mdl-data-table__cell--non-numeric">
+								<?php echo $row['Id_Produ']?>
+							</td>
+							<td>
+								<?php echo $row['Producto']?>
+							</td>
+							<td>
+								<?php echo$row['Unidades']?>
+							</td>
+							<td>
+								<?php echo$row['Precio_Venta']?>
+							</td>
+							<td>
+								<?php echo$row['Precio_Pro']?>
+							</td>
+							<td>
+								<a href='editar_producto.php?id=<?php ?>'>Editar</a> |
+								<a href='editar_producto.php?id=<?php ?>'>Eliminar</a>
+							</td>
+						</tr>
+						<?php
+						}
+						?>
+					<?php
+					}
+					else {
+						echo "No hay productos en la base de datos.";
+					}
+
+					// Cerrar la conexión
+					$conn->close();
+					?>
+				</table>
 			</div>
 		</div>
 	</section>

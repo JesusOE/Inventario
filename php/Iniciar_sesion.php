@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
     // Inicio de sesión exitoso
     session_start();
     $_SESSION['Nombre'] = $Nombre;
-    header('Location: ../home.html'); // Redirigir a la página de inicio después del inicio de sesión
+    header('Location: ../home.php'); // Redirigir a la página de inicio después del inicio de sesión
 } else {
     // Inicio de sesión fallido
     header('Location: ../index.html');

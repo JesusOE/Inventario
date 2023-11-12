@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,84 +12,87 @@
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
-	<script src="js/material.min.js" ></script>
-	<script src="js/sweetalert2.min.js" ></script>
-	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
-	<script src="js/main.js" ></script>
+	<script>
+		window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+	</script>
+	<script src="js/material.min.js"></script>
+	<script src="js/sweetalert2.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
+
 <body>
 	<!-- Notifications area -->
 	<section class="full-width container-notifications">
 		<div class="full-width container-notifications-bg btn-Notification"></div>
-	    <section class="NotificationArea">
-	        <div class="full-width text-center NotificationArea-title tittles">Notificaciones <i class="zmdi zmdi-close btn-Notification"></i></div>
-	        <a href="#" class="Notification" id="notifation-unread-1">
-	            <div class="Notification-icon"><i class="zmdi zmdi-accounts-alt bg-info"></i></div>
-	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle"></i>
-	                    <strong>Registro de nuevo usuario</strong> 
-	                    <br>
-	                    <small>Hoy</small>
-	                </p>
-	            </div>
-	        	
-	        </a>
-	        <a href="#" class="Notification" id="notifation-read-1">
-	            <div class="Notification-icon"><i class="zmdi zmdi-cloud-download bg-primary"></i></div>
-	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle-o"></i>
-	                    <strong>Nuevas actualizaciones</strong> 
-	                    <br>
-	                    <small>18/10/2023</small>
-	                </p>
-	            </div>
-	            
-	        </a>
-	        <a href="#" class="Notification" id="notifation-unread-2">
-	            <div class="Notification-icon"><i class="zmdi zmdi-upload bg-success"></i></div>
-	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle"></i>
-	                    <strong>Archivo subido</strong> 
-	                    <br>
-	                    <small>23/09/2023</small>
-	                </p>
-	            </div>
-	            
-	        </a> 
-	        <a href="#" class="Notification" id="notifation-read-2">
-	            <div class="Notification-icon"><i class="zmdi zmdi-mail-send bg-danger"></i></div>
-	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle-o"></i>
-	                    <strong>Nuevo correo</strong> 
-	                    <br>
-	                    <small>20/09/2023</small>
-	                </p>
-	            </div>
-	            
-	        </a>
-	        <a href="#" class="Notification" id="notifation-read-3">
-	            <div class="Notification-icon"><i class="zmdi zmdi-folder bg-primary"></i></div>
-	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle-o"></i>
-	                    <strong>Carpeta eliminada</strong> 
-	                    <br>
-	                    <small>16/09/2023o</small>
-	                </p>
-	            </div>
-	            
-	        </a>  
-	    </section>
+		<section class="NotificationArea">
+			<div class="full-width text-center NotificationArea-title tittles">Notificaciones <i class="zmdi zmdi-close btn-Notification"></i></div>
+			<a href="#" class="Notification" id="notifation-unread-1">
+				<div class="Notification-icon"><i class="zmdi zmdi-accounts-alt bg-info"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle"></i>
+						<strong>Registro de nuevo usuario</strong>
+						<br>
+						<small>Hoy</small>
+					</p>
+				</div>
+
+			</a>
+			<a href="#" class="Notification" id="notifation-read-1">
+				<div class="Notification-icon"><i class="zmdi zmdi-cloud-download bg-primary"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle-o"></i>
+						<strong>Nuevas actualizaciones</strong>
+						<br>
+						<small>18/10/2023</small>
+					</p>
+				</div>
+
+			</a>
+			<a href="#" class="Notification" id="notifation-unread-2">
+				<div class="Notification-icon"><i class="zmdi zmdi-upload bg-success"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle"></i>
+						<strong>Archivo subido</strong>
+						<br>
+						<small>23/09/2023</small>
+					</p>
+				</div>
+
+			</a>
+			<a href="#" class="Notification" id="notifation-read-2">
+				<div class="Notification-icon"><i class="zmdi zmdi-mail-send bg-danger"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle-o"></i>
+						<strong>Nuevo correo</strong>
+						<br>
+						<small>20/09/2023</small>
+					</p>
+				</div>
+
+			</a>
+			<a href="#" class="Notification" id="notifation-read-3">
+				<div class="Notification-icon"><i class="zmdi zmdi-folder bg-primary"></i></div>
+				<div class="Notification-text">
+					<p>
+						<i class="zmdi zmdi-circle-o"></i>
+						<strong>Carpeta eliminada</strong>
+						<br>
+						<small>16/09/2023o</small>
+					</p>
+				</div>
+
+			</a>
+		</section>
 	</section>
 	<!-- navBar -->
 	<div class="full-width navBar">
 		<div class="full-width navBar-options">
-			<i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>	
+			<i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>
 			<div class="mdl-tooltip" for="btn-menu">Menu</div>
 			<nav class="navBar-options-list">
 				<ul class="list-unstyle">
@@ -102,7 +105,7 @@
 						<i class="zmdi zmdi-power"></i>
 						<div class="mdl-tooltip" for="btn-exit">Salir</div>
 					</li>
-					<li class="text-condensedLight noLink" ><small>Nombre de Usuario</small></li>
+					<li class="text-condensedLight noLink"><small>Nombre de Usuario</small></li>
 					<li class="noLink">
 						<figure>
 							<img src="assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
@@ -117,7 +120,7 @@
 		<div class="full-width navLateral-bg btn-menu"></div>
 		<div class="full-width navLateral-body">
 			<div class="full-width navLateral-body-logo text-center tittles">
-				<i class="zmdi zmdi-close btn-menu"></i> Inventario 
+				<i class="zmdi zmdi-close btn-menu"></i> Inventario
 			</div>
 			<figure class="full-width" style="height: 77px;">
 				<div class="navLateral-body-cl">
@@ -134,7 +137,7 @@
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
 					<li class="full-width">
-						<a href="home.html" class="full-width">
+						<a href="home.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-view-dashboard"></i>
 							</div>
@@ -157,7 +160,7 @@
 						<ul class="full-width menu-principal sub-menu-options">
 
 							<li class="full-width">
-								<a href="providers.html" class="full-width">
+								<a href="providers.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-truck"></i>
 									</div>
@@ -167,7 +170,7 @@
 								</a>
 							</li>
 							<li class="full-width">
-								<a href="payments.html" class="full-width">
+								<a href="payments.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-card"></i>
 									</div>
@@ -201,7 +204,7 @@
 						</a>
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
-								<a href="admin.html" class="full-width">
+								<a href="admin.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-account"></i>
 									</div>
@@ -211,7 +214,7 @@
 								</a>
 							</li>
 							<li class="full-width">
-								<a href="client.html" class="full-width">
+								<a href="client.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-accounts"></i>
 									</div>
@@ -224,7 +227,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="products.html" class="full-width">
+						<a href="products.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -235,7 +238,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="sales.html" class="full-width">
+						<a href="sales.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-shopping-cart"></i>
 							</div>
@@ -246,7 +249,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventory.html" class="full-width">
+						<a href="inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>
@@ -334,7 +337,7 @@
 												<span class="mdl-textfield__error">Número invalido</span>
 											</div>
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" pattern="-?[0-9.]*(\.[0-9]+)?" id="Precio_Venta" name="Precio_Venta" required>
+												<input class="mdl-textfield__input" type="number" pattern="-?[0-9.]*(\.[0-9]+)?" id="Precio_Venta" name="Precio_Venta" required>
 												<label class="mdl-textfield__label" for="Precio_Venta">Precio de venta</label>
 												<span class="mdl-textfield__error">Precio no válido</span>
 											</div>
@@ -342,7 +345,7 @@
 										<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
 											<h5 class="text-condensedLight">Proveedor</h5>
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text"  id="Precio_Pro" name="Precio_Pro" required>
+												<input class="mdl-textfield__input" type="number" id="Precio_Pro" name="Precio_Pro" required>
 												<label class="mdl-textfield__label" for="Precio_Pro">Precio con proveedor</label>
 												<span class="mdl-textfield__error">Precio no válido</span>
 											</div>
@@ -354,7 +357,7 @@
 									</div>
 									<p class="text-center">
 										<input type="submit" value="Registrar">
-										<div class="mdl-tooltip" for="btn-addProduct">Agregar producto</div>
+									<div class="mdl-tooltip" for="btn-addProduct">Agregar producto</div>
 									</p>
 								</form>
 							</div>
@@ -365,78 +368,34 @@
 			<div class="mdl-tabs__panel" id="tabListProducts">
 				<div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
-						<form action="#">
-							<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-								<label class="mdl-button mdl-js-button mdl-button--icon" for="searchProduct">
-									<i class="zmdi zmdi-search"></i>
-								</label>
-								<div class="mdl-textfield__expandable-holder">
-									<input class="mdl-textfield__input" type="text" id="searchProduct">
-									<label class="mdl-textfield__label"></label>
-								</div>
-							</div>
-						</form>
 						<div class="full-width text-center" style="padding: 30px 0;">
-							<div class="mdl-card mdl-shadow--2dp full-width product-card">
-								<div class="mdl-card__title">
-									<img src="assets/img/fontLogin.jpg" alt="product" class="img-responsive">
-								</div>
-								<div class="mdl-card__supporting-text">
-									<small>Stock</small><br>
-									<small>Categoría</small>
-								</div>
-								<div class="mdl-card__actions mdl-card--border">
-									Nombre del producto
-									<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										<i class="zmdi zmdi-more"></i>
-									</button>
-								</div>
-							</div>
-							<div class="mdl-card mdl-shadow--2dp full-width product-card">
-								<div class="mdl-card__title">
-									<img src="assets/img/fontLogin.jpg" alt="product" class="img-responsive">
-								</div>
-								<div class="mdl-card__supporting-text">
-									<small>Stock</small><br>
-									<small>Categoría</small>
-								</div>
-								<div class="mdl-card__actions mdl-card--border">
-									Nombre del producto
-									<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										<i class="zmdi zmdi-more"></i>
-									</button>
-								</div>
-							</div>
-							<div class="mdl-card mdl-shadow--2dp full-width product-card">
-								<div class="mdl-card__title">
-									<img src="assets/img/fontLogin.jpg" alt="product" class="img-responsive">
-								</div>
-								<div class="mdl-card__supporting-text">
-									<small>Stock</small><br>
-									<small>Categoría</small>
-								</div>
-								<div class="mdl-card__actions mdl-card--border">
-									Nombre del producto
-									<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										<i class="zmdi zmdi-more"></i>
-									</button>
-								</div>
-							</div>
-							<div class="mdl-card mdl-shadow--2dp full-width product-card">
-								<div class="mdl-card__title">
-									<img src="assets/img/fontLogin.jpg" alt="product" class="img-responsive">
-								</div>
-								<div class="mdl-card__supporting-text">
-									<small>Stock</small><br>
-									<small>Categoría</small>
-								</div>
-								<div class="mdl-card__actions mdl-card--border">
-									Nombre del producto
-									<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										<i class="zmdi zmdi-more"></i>
-									</button>
-								</div>
-							</div>
+
+						<input class="mdl-textfield__input" id="buscador" type="text" placeholder="Buscar">
+								<div id="resultados"></div>
+								<script>
+									// Función para realizar la búsqueda en tiempo real
+									function buscarEnTiempoReal() {
+										var valorBusqueda = $("#buscador").val();
+
+										// Realiza una solicitud AJAX a un archivo PHP que maneja la búsqueda
+										$.ajax({
+											type: "POST",
+											url: "php/buscar_products.php",
+											data: {
+												valor: valorBusqueda
+											},
+											success: function(result) {
+												$("#resultados").html(result);
+											}
+										});
+									}
+
+									// Manejar el evento de escritura en el campo de búsqueda
+									$("#buscador").on("input", function() {
+										buscarEnTiempoReal();
+									});
+								</script>
+
 						</div>
 					</div>
 				</div>
@@ -444,4 +403,5 @@
 		</div>
 	</section>
 </body>
+
 </html>

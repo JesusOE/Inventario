@@ -1,10 +1,13 @@
+<?php
+include 'php/numero_registros.php';
+?>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Clients</title>
+	<title>Inicio</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/sweetalert2.css">
 	<link rel="stylesheet" href="css/material.min.css">
@@ -134,7 +137,7 @@
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
 					<li class="full-width">
-						<a href="home.html" class="full-width">
+						<a href="home.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-view-dashboard"></i>
 							</div>
@@ -157,7 +160,7 @@
 						<ul class="full-width menu-principal sub-menu-options">
 
 							<li class="full-width">
-								<a href="providers.html" class="full-width">
+								<a href="providers.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-truck"></i>
 									</div>
@@ -167,7 +170,7 @@
 								</a>
 							</li>
 							<li class="full-width">
-								<a href="payments.html" class="full-width">
+								<a href="payments.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-card"></i>
 									</div>
@@ -201,7 +204,7 @@
 						</a>
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
-								<a href="admin.html" class="full-width">
+								<a href="admin.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-account"></i>
 									</div>
@@ -211,7 +214,7 @@
 								</a>
 							</li>
 							<li class="full-width">
-								<a href="client.html" class="full-width">
+								<a href="client.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-accounts"></i>
 									</div>
@@ -224,7 +227,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="products.html" class="full-width">
+						<a href="products.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -235,7 +238,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="sales.html" class="full-width">
+						<a href="sales.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-shopping-cart"></i>
 							</div>
@@ -246,7 +249,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventory.html" class="full-width">
+						<a href="inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>
@@ -295,146 +298,74 @@
 	</section>
 	<!-- pageContent -->
 	<section class="full-width pageContent">
-		<section class="full-width header-well">
-			<div class="full-width header-well-icon">
-				<i class="zmdi zmdi-accounts"></i>
-			</div>
-			<div class="full-width header-well-text">
-				<p class="text-condensedLight">
-					Gestionar y consultar la información de los clientes de manera eficiente.
-				</p>
-			</div>
+		<section class="full-width text-center" style="padding: 40px 0;">
+			<h3 class="text-center tittles">Sistema de inventario y ventas</h3>
+			<!-- Tiles -->
+			<article class="full-width tile">
+				<div class="tile-text">
+					<span class="text-condensedLight">
+					<?php 
+						echo obtenerCantidadUsuarios() . "<br>";
+					?>
+						<small>Administradores</small>
+					</span>
+				</div>
+				<i class="zmdi zmdi-account tile-icon"></i>
+			</article>
+			<article class="full-width tile">
+				<div class="tile-text">
+					<span class="text-condensedLight">
+					<?php 
+						echo obtenerCantidadClientes() . "<br>";
+					?>
+						<small>Clientes</small>
+					</span>
+				</div>
+				<i class="zmdi zmdi-accounts tile-icon"></i>
+			</article>
+			<article class="full-width tile">
+				<div class="tile-text">
+					<span class="text-condensedLight">
+					<?php 
+						echo obtenerCantidadProveedores() . "<br>";
+					?>
+						<small>Proveedores</small>
+					</span>
+				</div>
+				<i class="zmdi zmdi-truck tile-icon"></i>
+			</article>
+			<article class="full-width tile">
+				<div class="tile-text">
+					<span class="text-condensedLight">
+						0<br>
+						<small>Categorias</small>
+					</span>
+				</div>
+				<i class="zmdi zmdi-label tile-icon"></i>
+			</article>
+			<article class="full-width tile">
+				<div class="tile-text">
+					<span class="text-condensedLight">
+					<?php 
+						echo obtenerCantidadProductos() . "<br>";
+					?>
+						<small>Productos</small>
+					</span>
+				</div>
+				<i class="zmdi zmdi-washing-machine tile-icon"></i>
+			</article>
+			<article class="full-width tile">
+				<div class="tile-text">
+					<span class="text-condensedLight">
+					<?php 
+						echo obtenerCantidadVentas() . "<br>";
+					?>
+						<small>Ventas</small>
+					</span>
+				</div>
+				<i class="zmdi zmdi-shopping-cart tile-icon"></i>
+			</article>
 		</section>
-		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-			<div class="mdl-tabs__tab-bar">
-				<a href="#tabNewClient" class="mdl-tabs__tab is-active">Añadir</a>
-				<a href="#tabListClient" class="mdl-tabs__tab">Lista</a>
-			</div>
-			<div class="mdl-tabs__panel is-active" id="tabNewClient">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
-						<div class="full-width panel mdl-shadow--2dp">
-							<div class="full-width panel-tittle bg-primary text-center tittles">
-								Nuevo cliente
-							</div>
-							<div class="full-width panel-content">
-								<form action="php/insertar_cliente.php" method="post">
-									<h5 class="text-condensedLight">Datos de cliente</h5>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="Nombre" name="Nombre" required>
-										<label class="mdl-textfield__label" for="Nombre">Nombre</label>
-										<span class="mdl-textfield__error">Nombre inválido</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" id="Dirección" name="Dirección">
-										<label class="mdl-textfield__label" for="Dirección">Dirección</label>
-										<span class="mdl-textfield__error">Dirección inválida</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="tel" pattern="-?[0-9+()- ]*(\.[0-9]+)?" id="Teléfono" name="Teléfono">
-										<label class="mdl-textfield__label" for="Teléfono">Teléfono</label>
-										<span class="mdl-textfield__error">Numero de telefono invalido</span>
-									</div>
-									<p class="text-center">
-										<input type="submit" value="Registrar">
-										<div class="mdl-tooltip" for="btn-addClient">Agregar cliente</div>
-									</p>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="mdl-tabs__panel" id="tabListClient">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
-						<div class="full-width panel mdl-shadow--2dp">
-							<div class="full-width panel-tittle bg-success text-center tittles">
-								Lista de clientes
-							</div>
-							<div class="full-width panel-content">
-								<form action="#">
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-										<label class="mdl-button mdl-js-button mdl-button--icon" for="searchClient">
-											<i class="zmdi zmdi-search"></i>
-										</label>
-										<div class="mdl-textfield__expandable-holder">
-											<input class="mdl-textfield__input" type="text" id="searchClient">
-											<label class="mdl-textfield__label"></label>
-										</div>
-									</div>
-								</form>
-								<div class="mdl-list">
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-account mdl-list__item-avatar"></i>
-											<span>1. Nombre del cliente</span>
-											<span class="mdl-list__item-sub-title">ID</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-account mdl-list__item-avatar"></i>
-											<span>2. Nombre del cliente</span>
-											<span class="mdl-list__item-sub-title">ID</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-account mdl-list__item-avatar"></i>
-											<span>3. Nombre del cliente</span>
-											<span class="mdl-list__item-sub-title">ID</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-account mdl-list__item-avatar"></i>
-											<span>4. Nombre del cliente</span>
-											<span class="mdl-list__item-sub-title">ID</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-account mdl-list__item-avatar"></i>
-											<span>5. Nombre del cliente</span>
-											<span class="mdl-list__item-sub-title">ID</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-account mdl-list__item-avatar"></i>
-											<span>6. Nombre del cliente</span>
-											<span class="mdl-list__item-sub-title">ID</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-									<li class="full-width divider-menu-h"></li>
-									<div class="mdl-list__item mdl-list__item--two-line">
-										<span class="mdl-list__item-primary-content">
-											<i class="zmdi zmdi-account mdl-list__item-avatar"></i>
-											<span>7. Nombre del cliente</span>
-											<span class="mdl-list__item-sub-title">ID</span>
-										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
 	</section>
 </body>
 </html>
